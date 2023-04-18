@@ -1,83 +1,9 @@
 import random
 from collections import Counter
 
-
 class GameLogic:
-
     def __init__(self):
         pass
-
-    # def calculate_score(tuple_of_dice_roll):
-        
-    #     tuple_of_dice_roll_counter = Counter(tuple_of_dice_roll)
-    #     print(tuple_of_dice_roll_counter)
-
-    #     # checks if the tuple_of_dice_roll_counter dictionary is empty or not. If the dictionary is empty
-    #     if len(tuple_of_dice_roll)==0:
-    #         return 0
-        
-    #     num, repetition = list(tuple_of_dice_roll_counter.items())[0]
-    #     print("num ", num, 'repetition ', repetition)
-
-
-    #     # for i in range(6):
-    #     #     count = 0
-
-    #     #     print(i)
-
-    #     #     if num == 1 and repetition == 1:
-    #     #         return 100
-    #     #     elif num == 1 and repetition == 2:
-    #     #         return 200
-    #     #     elif num == 1 and repetition == 3:
-    #     #         print(i)
-    #     #         return 1000
-    #     #     elif num == 1 and repetition == 4:
-    #     #         print(i)
-    #     #         return 2000
-    #     #     elif num == 1 and repetition == 5:
-    #     #         print(i)
-    #     #         return 3000
-    #     #     elif num == 1 and repetition == 6:
-    #     #         return 4000
-
-
-    #     score = 0
-    #     if num == 1:
-    #         if repetition == 1:
-    #             return 100
-    #         elif repetition == 2:
-    #             return 200
-    #         if repetition >= 3:
-    #             score += 1000 * (repetition - 3 + 1)
-    #             return score
-    #         if repetition == 6:
-    #             score += 2000
-    #             return score
-            
-    #     if num == 2:
-    #         if repetition == 1:
-    #             return 0
-    #         elif repetition == 2:
-    #             return 0
-    #         if repetition >= 3:
-    #             score += 200 * (repetition - 3 + 1)
-    #             return score
-    #         if repetition == 6:
-    #             score += 200
-    #             return score
-    #     if num == 3:
-    #         if repetition == 1:
-    #             return 0
-    #         elif repetition == 2:
-    #             return 0
-    #         if repetition >= 3:
-    #             score += 300 * (repetition - 3 + 1)
-    #             return score
-    #         if repetition == 6:
-    #             score += 300
-    #             return score
-
 
     def calculate_score(tup):
         """
@@ -153,14 +79,18 @@ class GameLogic:
         # stright 1-6    
         if len(num_counter) == 6:
              unbancked_points = 2000             
-        return unbancked_points   
+        return unbancked_points        
 
-    def roll_dice(number_of_dice):
-        list_of_num = []
-        for i in range(number_of_dice):
-            num = random.randint(1, 6)
-            list_of_num.append(num)
-        return list_of_num
+    def roll_dice(int):
+        """
+        this function recives an integar represents the number of dice we use to roll and gives back a random numbers between 1-6 depands on the int given  
+        """
+        list = []
+        for i in range(int):
+              x = random.randint(1,6)
+              list.append(x)
+        return tuple(list)         
+
 
 
 if __name__ == '__main__':
