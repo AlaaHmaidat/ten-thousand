@@ -3,7 +3,7 @@ from ten_thousand.game_logic import GameLogic
 
 pytestmark = [pytest.mark.version_1]
 
-@pytest.mark.skip(reason="Skipping this test for now")
+# @pytest.mark.skip(reason="Skipping this test for now")
 def test_single_five():
     actual = GameLogic.calculate_score((5,))
     expected = 50

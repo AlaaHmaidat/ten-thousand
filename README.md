@@ -7,4 +7,5 @@
 
 ## Tests
 ### How do you run tests?
+* uncomment the import line in game.py the comment the presnt one
 * You need to run pytest in the tirmenal

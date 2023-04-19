@@ -96,3 +96,4 @@ class GameLogic:
 if __name__ == '__main__':
 
     print(GameLogic.calculate_score((1,5)))
+    print(GameLogic.roll_dice(6))
