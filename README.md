@@ -1,4 +1,4 @@
-# LAB - Class 06
+# LAB - Class 06,Class 07,Class 08
 ## project name : Ten thousand game
 ## *Author: Alaa Hmaidat*
 ## Setup
